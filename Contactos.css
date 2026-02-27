@@ -142,6 +142,7 @@
 .hero-logo-contactos {
   height: 120px;
   width: auto;
+  animation: fadeIn 2s ease-out;
 }
 
 @keyframes fadeIn {
@@ -215,33 +216,185 @@
 .map-container iframe {
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 800px;
 }
 
 /* SCROLL */
 html { scroll-behavior: smooth; }
+.site-footer {
+  background: #0f0f0f;
+  color: #ccc;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
 
-/* MOBILE */
+/* RESPONSIVE - Tablet */
+@media (max-width: 1024px) {
+  .page-contactos {
+    padding: 40px 40px;
+  }
+
+  .contact-info {
+    justify-content: center;
+  }
+}
+
+/* MOBILE - Navigation Bar Fix */
 @media (max-width: 768px) {
-  .hero-bg-contactos { width: 140%; }
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  .inline-bar {
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
+  .inline-content {
+    padding: 0 5px;
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-center {
+    position: relative;
+    left: auto;
+    transform: none;
+    order: 2;
+    flex-shrink: 0;
+  }
+
+  .logo-center img {
+    height: 40px;
+  }
+
+  .inline-nav {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .inline-nav.left {
+    order: 1;
+  }
+
+  .inline-nav.right {
+    order: 3;
+  }
+
+  .inline-nav a {
+    font-size: 9px;
+    white-space: nowrap;
+  }
+
+  .hero-bg-contactos { 
+    width: 100%; 
+    max-width: 100vw;
+  }
+
+  .hero-overlay {
+    padding: 15px;
+    max-width: 100vw;
+  }
+
+  .h1-contactos {
+    font-size: 1.8rem;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
+  .hero-logo-contactos {
+    height: 70px;
+  }
 
   .page-contactos {
-    padding: 30px 20px;
+    padding: 20px 15px;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .contactos-content {
+    padding: 0 5px;
+    max-width: 100%;
   }
 
   .contactos-content h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    word-wrap: break-word;
   }
 
   .contactos-content p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    max-width: 100%;
   }
 
   .contact-info {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    max-width: 100%;
   }
 
   .info-item {
-    min-width: 100%;
+    min-width: unset;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  .info-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .map-container {
+    width: 100%;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    max-width: 100vw;
+    height: 250px;
+  }
+
+  .site-footer {
+    max-width: 100vw;
+    padding: 15px 10px;
+  }
+}
+
+/* EXTRA SMALL MOBILE */
+@media (max-width: 480px) {
+  .h1-contactos {
+    font-size: 1.5rem;
+  }
+
+  .hero-logo-contactos {
+    height: 60px;
+  }
+
+  .page-contactos {
+    padding: 20px 15px;
+  }
+
+  .contactos-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .info-item {
+    padding: 15px;
+  }
+
+  .info-item h3 {
+    font-size: 1.2rem;
   }
 }

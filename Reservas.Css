@@ -290,37 +290,153 @@
 /* SCROLL */
 html { scroll-behavior: smooth; }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .hero-bg-reservas { width: 140%; }
+.site-footer {
+  background: #0f0f0f;
+  color: #ccc;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
 
+/* RESPONSIVE (MOBILE & TABLET) */
+@media (max-width: 1024px) {
+  /* Container principal mais estreito em tablets */
   .page-reservas {
-    padding: 30px 20px;
+    padding: 40px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Header e navegação */
+  .inline-bar {
+    height: 50px !important;
   }
 
-  .reservas-content h2 {
-    font-size: 2rem;
+  .inline-content {
+    padding: 0 10px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
   }
 
-  .reservas-content p {
-    font-size: 1rem;
+  .logo-center {
+    position: relative !important;
+    left: auto !important;
+    transform: none !important;
+    order: 2;
   }
 
-  .form-row {
-    flex-direction: column;
-    gap: 0;
+  .logo-center img {
+    height: 40px !important;
   }
 
-  .info-reserva {
-    flex-direction: column;
-    align-items: center;
+  .inline-nav.left {
+    order: 1;
   }
 
-  .info-item {
-    min-width: 100%;
+  .inline-nav.right {
+    order: 3;
+  }
+
+  .inline-nav {
+    gap: 8px !important;
+  }
+
+  .inline-nav a {
+    font-size: 10px !important;
+  }
+
+  /* Hero section */
+  .hero-bg-reservas {
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .hero-reservas {
+    height: 50vh !important;
+  }
+
+  .hero-overlay {
+    padding: 15px;
+    gap: 15px !important;
   }
 
   .h1-reservas {
-    font-size: 2rem;
+    font-size: 1.8rem !important;
+  }
+
+  .hero-logo-reservas {
+    height: 80px !important;
+  }
+
+  /* Page content */
+  .page-reservas {
+    padding: 30px 15px !important;
+  }
+
+  .reservas-content {
+    max-width: 100% !important;
+  }
+
+  .reservas-content h2 {
+    font-size: 1.8rem !important;
+  }
+
+  .reservas-content p {
+    font-size: 1rem !important;
+  }
+
+  /* Formulário */
+  .reserva-form {
+    padding: 20px 15px !important;
+  }
+
+  .form-row {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 0.9rem !important;
+    padding: 10px !important;
+  }
+
+  /* Info reserva */
+  .info-reserva {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+  }
+
+  .info-item {
+    min-width: 100% !important;
+    padding: 15px !important;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 15px 10px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Pequenos ajustes para mobile muito pequeno */
+@media (max-width: 480px) {
+  .h1-reservas {
+    font-size: 1.4rem !important;
+  }
+
+  .hero-logo-reservas {
+    height: 60px !important;
+  }
+
+  .reservas-content h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .info-item h3 {
+    font-size: 1.1rem !important;
   }
 }
